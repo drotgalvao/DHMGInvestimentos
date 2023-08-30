@@ -1,0 +1,13 @@
+{
+  "name": "test",
+  "login": {
+    "signInToYourAccount": "Entre na sua conta",
+    "welcomeBack": "Bem vindo de volta",
+    "email": "Email",
+    "password": "Senha",
+    "rememberFor30Days": "Lembrar por 30 dias",
+    "forgotYourPassword": "Esqueceu sua senha?",
+    "signIn": "Entrar",
+    "signInWithGoogle": "Entrar com Google"
+  }
+}

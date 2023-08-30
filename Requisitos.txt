@@ -1,0 +1,52 @@
+Requisitos Funcionais:
+
+Registro e Login:
+
+Os usuários devem ser capazes de se registrar com um nome de usuário, e-mail e senha.
+Os usuários devem ser capazes de fazer login com suas credenciais.
+Adicionar Ativos:
+
+Os usuários devem poder adicionar informações sobre ativos, incluindo o nome da ação, quantidade e preço de compra.
+O sistema deve calcular automaticamente o valor total do ativo com base na quantidade e preço.
+Configuração de Percentuais-Alvo:
+
+Os usuários devem poder definir percentuais-alvo para cada ativo em sua carteira.
+Rebalanceamento Automático:
+
+O sistema deve calcular e exibir sugestões de rebalanceamento com base nos percentuais-alvo definidos pelos usuários.
+Os usuários devem ter a opção de aplicar o rebalanceamento sugerido.
+Visualização da Carteira:
+
+Os usuários devem poder visualizar uma visão geral da sua carteira de investimentos, incluindo detalhes de cada ativo, percentuais, valores atuais e desvios em relação aos percentuais-alvo.
+Histórico de Transações:
+
+Os usuários devem poder visualizar um histórico das transações de compra e venda de ativos.
+Gráficos e Análises:
+
+O sistema deve fornecer gráficos que mostrem a alocação atual dos ativos em relação aos percentuais-alvo.
+Deve haver uma maneira de visualizar o desempenho da carteira ao longo do tempo.
+Segurança:
+
+As senhas dos usuários devem ser armazenadas de forma segura (hashing e salting).
+Os usuários só devem ter acesso aos seus próprios dados.
+Requisitos Não Funcionais:
+
+Usabilidade:
+
+A interface do usuário deve ser intuitiva e fácil de usar.
+As informações devem ser apresentadas de forma clara e organizada.
+Segurança:
+
+As informações dos usuários e seus dados de investimento devem ser mantidos seguros.
+Desempenho:
+
+O sistema deve ser responsivo e eficiente, especialmente ao lidar com cálculos e exibição de informações.
+Escalabilidade:
+
+O sistema deve ser projetado para acomodar um número crescente de usuários e ativos sem perda de desempenho.
+Compatibilidade com Dispositivos:
+
+O sistema deve ser acessível em diferentes dispositivos, incluindo desktops, tablets e smartphones.
+Manutenção:
+
+O código deve ser bem estruturado e documentado para facilitar a manutenção e futuras atualizações.
