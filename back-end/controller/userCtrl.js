@@ -52,7 +52,7 @@ const loginUserCtrl = asyncHandler(async (req, res) => {
       token: generateToken(findUser?._id),
     });
   } else {
-    throw new Error("Invalid Credentials");
+    throw new Error("Credenciais de usuario invalidas.");
   }
 });
 
@@ -63,7 +63,7 @@ const loginAdminCtrl = asyncHandler(async (req, res) => {
   const { email, password } = req.body;
   // check if user exists or not
   const findAdmin = await User.findOne({ email: email });
-  if (findAdmin.role !== "admin") throw new Error("Not Authorized");
+  if (findAdmin.role !== "admin") throw new Error("Não é administrador.");
   if (findAdmin && (await findAdmin.isPasswordMatched(password))) {
     const refreshToken = await generateRefreshToken(findAdmin?._id);
     const updateUser = await User.findByIdAndUpdate(
@@ -90,7 +90,7 @@ const loginAdminCtrl = asyncHandler(async (req, res) => {
       token: generateToken(findAdmin?._id),
     });
   } else {
-    throw new Error("Invalid Credentials");
+    throw new Error("Credenciais de administrador invalidas.");
   }
 });
 

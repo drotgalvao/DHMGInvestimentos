@@ -26,7 +26,7 @@ const isAdmin = asyncHandler(async (req, res, next) => {
   const { email } = req.user;
   const adminUser = await User.findOne({ email: email });
   if (adminUser.role !== "admin") {
-    throw new Error("You are not authorized to access only admin");
+    throw new Error("Você não esta autorizado para acessar apenas administradores.");
   } else {
     next();
   }
