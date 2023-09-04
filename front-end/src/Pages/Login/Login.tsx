@@ -15,6 +15,9 @@ import DarkModeRoundedIcon from "@mui/icons-material/DarkModeRounded";
 import LightModeRoundedIcon from "@mui/icons-material/LightModeRounded";
 import GoogleIcon from "./GoogleIcon";
 import { useTranslation } from "react-i18next";
+import { login } from "./LoginApi";
+import { Navigate } from "react-router-dom";
+
 
 interface FormElements extends HTMLFormControlsCollection {
   email: HTMLInputElement;
@@ -59,7 +62,7 @@ function ColorSchemeToggle({ onClick, ...props }: IconButtonProps) {
 /**
  * This template uses [`Inter`](https://fonts.google.com/specimen/Inter?query=inter) font.
  */
-export default function JoySignInSideTemplate() {
+export default function Login() {
   const { t } = useTranslation();
 
   return (
@@ -174,7 +177,20 @@ export default function JoySignInSideTemplate() {
                   password: formElements.password.value,
                   persistent: formElements.persistent.checked,
                 };
-                alert(JSON.stringify(data, null, 2));
+                //alert(JSON.stringify(data, null, 2))
+                async function handleLogin(data : any) {
+                  try {
+                    const jsonData = JSON.stringify(data);
+                    const userData = await login(jsonData);
+                    window.location.href = "/dashboard";
+                  } catch (e) {
+                    console.error(e);
+                  }
+                }
+                
+                // Chame a função handleLogin passando os dados do formulário
+                handleLogin(data);
+
               }}
             >
               <FormControl required>
